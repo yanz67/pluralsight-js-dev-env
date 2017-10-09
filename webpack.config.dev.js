@@ -1,4 +1,4 @@
-import path = from 'path';
+import path from 'path';
 
 export default {
 	debug: true,
@@ -17,7 +17,7 @@ export default {
 	module: {
 		loaders: [
 			{test: /\.js$/, enclude: /node_modules/, loaders: ['babel']},
-			{test: /\.cs$/, loaders: ['style', 'css']}
+			{test: /\.css$/, loaders: ['style', 'css']}
 		]
 	}
 }
