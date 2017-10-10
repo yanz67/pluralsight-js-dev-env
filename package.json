@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
-		"prestart": "babel-node buildScripts/startMessage.js",
-		"start": "npm-run-all --parallel security-check open:src",
-		"open:src": "babel-node buildScripts/srcServer.js",
-		"security-check": "nsp check"
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "security-check": "nsp check"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -30,10 +30,12 @@
     "eslint-watch": "2.1.14",
     "express": "4.14.0",
     "extract-text-webpack-plugin": "1.0.1",
+		"fs": "~> 0.0",
     "html-webpack-plugin": "2.22.0",
     "jsdom": "9.8.0",
     "json-schema-faker": "0.3.6",
     "json-server": "0.8.22",
+		"json-loader": "~> 0.5",
     "localtunnel": "1.8.1",
     "mocha": "3.1.2",
     "nock": "8.1.0",

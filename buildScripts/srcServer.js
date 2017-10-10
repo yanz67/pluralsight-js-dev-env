@@ -6,7 +6,9 @@ import config from '../webpack.config.dev';
 
 const port = 3000;
 const app = express();
+config.entry.unshift('webpack-dev-middleware');
 const compiler = webpack(config);
+
 
 app.use(require('webpack-dev-middleware')(compiler, {
 	noInfo: true,

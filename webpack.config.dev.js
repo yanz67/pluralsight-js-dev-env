@@ -1,12 +1,12 @@
 import path from 'path';
 
 export default {
+	entry: [
+		path.resolve(__dirname, 'src/index.js')
+	],
 	debug: true,
 	devtool: 'inline-source-map',
 	noInfo: false,
-	entry: [
-		path.resolve(__dirname, 'src/index')
-	],
 	target: 'web',
 	output: {
 		path: path.resolve(__dirname, 'src'),
@@ -16,8 +16,9 @@ export default {
 	plugins: [],
 	module: {
 		loaders: [
-			{test: /\.js$/, enclude: /node_modules/, loaders: ['babel']},
-			{test: /\.css$/, loaders: ['style', 'css']}
+			{test: /\.js$/, exclude:' /node_modules/', loaders: ['babel']},
+			{test: /\.css$/, loaders: ['style', 'css']},
+			{test: /\.json$/, loaders: ['json-loader']}
 		]
 	}
 }
