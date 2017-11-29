@@ -2,11 +2,11 @@ import path from 'path';
 
 export default {
 	entry: [
-		path.resolve(__dirname, 'src/index.js')
+		path.resolve(__dirname, 'src/index')
 	],
 	debug: true,
 	devtool: 'inline-source-map',
-	noInfo: false,
+	noInfo: true,
 	target: 'web',
 	output: {
 		path: path.resolve(__dirname, 'src'),
